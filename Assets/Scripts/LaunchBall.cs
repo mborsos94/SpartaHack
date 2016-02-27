@@ -5,6 +5,8 @@ using System.Collections;
 public class LaunchBall : MonoBehaviour {
     public float startingSpeed;
     public int   angleFromVertical;
+    public AudioSource source;
+    public AudioClip clip;
 
     private GameObject referenceObj;
 
@@ -27,6 +29,7 @@ public class LaunchBall : MonoBehaviour {
             body.velocity = velocity * startingSpeed;
 
             GameObject.DestroyObject(this);
+            source.PlayOneShot(clip);
         }
         else
         {
