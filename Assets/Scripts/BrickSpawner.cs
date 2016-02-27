@@ -11,6 +11,10 @@ public class BrickSpawner : MonoBehaviour {
     public float spawnChance;
     public GameObject brickPrefab;
 
+    public float powerUpChance;
+
+    Color[] colors = { Color.red, Color.yellow, Color.white, Color.blue, Color.green, Color.gray, Color.magenta };
+
 	void Start () 
     {
         for (int i = -verticalSpan; i <= verticalSpan; i++)
@@ -24,6 +28,12 @@ public class BrickSpawner : MonoBehaviour {
                     brickPosition.x = j * horizontalSpacing;
                     brickPosition.y = i * verticalSpacing;
                     GameObject obj = (GameObject)GameObject.Instantiate(brickPrefab, brickPosition, Quaternion.identity);
+                    float rand2 = Random.value;
+                    if (rand2 < powerUpChance)
+                    {
+                        int rand3 = Random.Range(0, colors.Length);
+                        obj.GetComponent<SpriteRenderer>().color = colors[rand3];
+                    }
                     obj.transform.parent = transform;
                 }
             }

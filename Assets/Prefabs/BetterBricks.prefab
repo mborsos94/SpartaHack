@@ -41,10 +41,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpan: 8
   horizontalSpan: 7
-  verticalSpacing: .340000004
-  horizontalSpacing: .699999988
-  spawnChance: .699999988
+  verticalSpacing: 0.34
+  horizontalSpacing: 0.7
+  spawnChance: 0.7
   brickPrefab: {fileID: 115514, guid: d7f20f016103ca046894f7a44dc6aada, type: 2}
+  powerUpChance: 0.1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
