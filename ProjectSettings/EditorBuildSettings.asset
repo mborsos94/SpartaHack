@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/startMenu.unity
   - enabled: 1
     path: Assets/joinGameMenu.unity
+  - enabled: 1
+    path: Assets/createRoomMenu.unity
