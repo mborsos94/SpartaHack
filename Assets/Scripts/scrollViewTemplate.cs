@@ -41,9 +41,9 @@ public class scrollViewTemplate : MonoBehaviour
                 scrollViewButtonTemplate TB = go.GetComponent<scrollViewButtonTemplate>();
                 TB.SetName(hostList[i].gameName);
                 go.transform.SetParent(Button_Template.transform.parent);
-                Button_Template.GetComponent<Button>().onClick.AddListener(delegate {JoinServer(hostList[i]);});
+                HostData hostDataObject = hostList[i];
+                go.GetComponent<Button>().onClick.AddListener(delegate { JoinServer(hostDataObject); });
             }
         }
-        MasterServer.ClearHostList();
     }
 }
