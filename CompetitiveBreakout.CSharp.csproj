@@ -75,7 +75,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BGMusicHandler.cs" />
+    <Compile Include="Assets\Scripts\BallHit.cs" />
     <Compile Include="Assets\Scripts\BallRespawn.cs" />
+    <Compile Include="Assets\Scripts\BrickCollider.cs" />
     <Compile Include="Assets\Scripts\BrickSpawner.cs" />
     <Compile Include="Assets\Scripts\Bricks.cs" />
     <Compile Include="Assets\Scripts\DestroyBlock.cs" />
@@ -85,6 +88,8 @@
     <Compile Include="Assets\Scripts\mainMenuEvents.cs" />
     <Compile Include="Assets\Scripts\nextSceneButton.cs" />
     <Compile Include="Assets\Scripts\refreshServerButton.cs" />
+    <Compile Include="Assets\Scripts\scrollViewButtonTemplate.cs" />
+    <Compile Include="Assets\Scripts\scrollViewTemplate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

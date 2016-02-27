@@ -5,6 +5,7 @@ public class PaddleMove : MonoBehaviour {
     public float paddleSpeed;
     public float minX;
     public float maxX;
+    public float startXPos;
 
     private Rigidbody2D body;
 
@@ -21,7 +22,7 @@ public class PaddleMove : MonoBehaviour {
         body.velocity = vel;
 
         Vector2 pos = transform.position;
-        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.x = Mathf.Clamp(pos.x, minX + startXPos, maxX + startXPos);
         transform.position = pos;
 	}
 }
