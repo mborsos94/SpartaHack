@@ -74,7 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3eee6193e2be04e95dc0efd8fcccaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
   ballHit: {fileID: 8300000, guid: ce43aa9420d38fc40aad87f6f7ea2ce1, type: 3}
 --- !u!114 &11435662
 MonoBehaviour:
@@ -89,7 +88,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingSpeed: 7
   angleFromVertical: 45
-  source: {fileID: 0}
   clip: {fileID: 8300000, guid: ce43aa9420d38fc40aad87f6f7ea2ce1, type: 3}
 --- !u!212 &21240746
 SpriteRenderer:
