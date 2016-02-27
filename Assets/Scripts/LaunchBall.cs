@@ -6,6 +6,13 @@ public class LaunchBall : MonoBehaviour {
     public float startingSpeed;
     public int   angleFromVertical;
 
+    private GameObject referenceObj;
+
+    void Start()
+    {
+        referenceObj = GameObject.FindGameObjectWithTag("Player");
+    }
+
 	void Update () {
         if (Input.GetButtonDown("Activate"))
         {
@@ -20,6 +27,12 @@ public class LaunchBall : MonoBehaviour {
             body.velocity = velocity * startingSpeed;
 
             GameObject.DestroyObject(this);
+        }
+        else
+        {
+            Vector2 ballPos = transform.position;
+            ballPos.x = referenceObj.transform.position.x;
+            transform.position = ballPos;
         }
 	}
 }
