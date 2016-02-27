@@ -5,14 +5,15 @@ using System.Collections;
 public class LaunchBall : MonoBehaviour {
     public float startingSpeed;
     public int   angleFromVertical;
-    public AudioSource source;
     public AudioClip clip;
+    AudioSource source;
 
     private GameObject referenceObj;
 
     void Start()
     {
         referenceObj = GameObject.FindGameObjectWithTag("Player");
+        source = GameObject.Find("SFXSource").GetComponent<AudioSource>();
     }
 
 	void Update () {

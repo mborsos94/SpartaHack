@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class BallHit : MonoBehaviour {
-    public AudioSource source;
+    AudioSource source;
     public AudioClip ballHit;
 	// Use this for initialization
 	void Start () {
-	
+	 source = GameObject.Find("SFXSource").GetComponent<AudioSource>();
 	}
 
     void OnCollisionEnter2D(Collision2D other)

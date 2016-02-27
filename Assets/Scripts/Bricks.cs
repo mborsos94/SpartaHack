@@ -4,6 +4,7 @@ using System.Collections;
 public class Bricks : MonoBehaviour {
     public GameObject[] bricks;
     public int minNumOfBricks;
+    public float startXPos;
 	// Use this for initialization
 	void Start () {
         RandomizeBricks();
@@ -32,7 +33,7 @@ public class Bricks : MonoBehaviour {
                     randNum = UnityEngine.Random.Range(0, 2);
                     if (randNum == 1 || currNumOfBricks == minNumOfBricks)
                     {
-                        bricks[i].GetComponent<RectTransform>().transform.position = new Vector3(0.5f + xpos - 5, ypos, 0);
+                        bricks[i].GetComponent<RectTransform>().transform.position = new Vector3(0.5f + + startXPos + xpos - 5, ypos, 0);
                         color = UnityEngine.Random.Range(0,colors.Length);
                         bricks[i].GetComponent<MeshRenderer>().material.color = colors[color];
                     }
