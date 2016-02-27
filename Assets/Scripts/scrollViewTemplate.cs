@@ -1,47 +1,49 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+
 
 public class scrollViewTemplate : MonoBehaviour
 {
 
     public GameObject Button_Template;
     private List<string> NameList = new List<string>();
-
+    private string gameTypeName = "Breakout";
 
     // Use this for initialization
     void Start()
     {
 
-        NameList.Add("Alan");
-        NameList.Add("Amy");
-        NameList.Add("Brian");
-        NameList.Add("Carrie");
-        NameList.Add("David");
-        NameList.Add("Joe");
-        NameList.Add("Jason");
-        NameList.Add("Michelle");
-        NameList.Add("Stephanie");
-        NameList.Add("Zoe");
+    }
 
-        foreach (string str in NameList)
-        {
-            GameObject go = Instantiate(Button_Template) as GameObject;
-            Debug.Log(str);
-            Debug.Log(go);
-            go.SetActive(true);
-            scrollViewButtonTemplate TB = go.GetComponent<scrollViewButtonTemplate>();
-            TB.SetName(str);
-            go.transform.SetParent(Button_Template.transform.parent);
-
-        }
-
-
+    void JoinServer(HostData hostData)
+    {
+        Network.Connect(hostData);
+        Debug.Log("Connected!");
     }
 
     public void ButtonClicked(string str)
     {
         Debug.Log(str + " button clicked.");
+    }
 
+    public void UpdateServerList()
+    {
+        MasterServer.RequestHostList(gameTypeName);
+        if (MasterServer.PollHostList().Length != 0)
+        {
+            HostData[] hostList = MasterServer.PollHostList();
+            for (int i = 0; i < hostList.Length; i++)
+            {
+                GameObject go = Instantiate(Button_Template) as GameObject;
+                go.SetActive(true);
+                scrollViewButtonTemplate TB = go.GetComponent<scrollViewButtonTemplate>();
+                TB.SetName(hostList[i].gameName);
+                go.transform.SetParent(Button_Template.transform.parent);
+                Button_Template.GetComponent<Button>().onClick.AddListener(delegate {JoinServer(hostList[i]);});
+            }
+        }
+        MasterServer.ClearHostList();
     }
 }

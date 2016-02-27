@@ -7,6 +7,8 @@ public class LaunchBall : MonoBehaviour {
     public int   angleFromVertical;
     public AudioClip clip;
     AudioSource source;
+    Color[] colors = { Color.red, Color.yellow, Color.white, Color.blue, Color.green, Color.gray, Color.magenta };
+    int color = 0;
 
     private GameObject referenceObj;
 
@@ -14,6 +16,8 @@ public class LaunchBall : MonoBehaviour {
     {
         referenceObj = GameObject.FindGameObjectWithTag("Player");
         source = GameObject.Find("SFXSource").GetComponent<AudioSource>();
+        color = UnityEngine.Random.Range(0, colors.Length);
+        this.gameObject.GetComponent<SpriteRenderer>().color = colors[color];
     }
 
 	void Update () {

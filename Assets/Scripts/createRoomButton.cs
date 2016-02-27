@@ -11,10 +11,8 @@ public class createRoomButton : MonoBehaviour {
         InputField nameInputFieldCo = nameInputField.GetComponent<InputField>();
         GameObject passwordInputField = GameObject.Find("passwordInput");
         InputField passwordInputFieldCo = nameInputField.GetComponent<InputField>();
-        Network.incomingPassword = passwordInputFieldCo.text;
         Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
         MasterServer.RegisterHost(gameTypeName, nameInputFieldCo.text);
-        Debug.Log(nameInputFieldCo.text + gameTypeName);
     }
 
 	// Use this for initialization
