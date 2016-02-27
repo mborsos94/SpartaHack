@@ -21,7 +21,7 @@ public class LaunchBall : MonoBehaviour {
     }
 
 	void Update () {
-        if (Input.GetButtonDown("Activate"))
+        if (Input.GetButtonDown("Fire1"))
         {
             // Pick out a random direction within constraints
             int minAngle = 90 - angleFromVertical;
