@@ -9,9 +9,7 @@ public class createRoomButton : MonoBehaviour {
     {
         GameObject nameInputField = GameObject.Find("roomNameInput");
         InputField nameInputFieldCo = nameInputField.GetComponent<InputField>();
-        GameObject passwordInputField = GameObject.Find("passwordInput");
-        InputField passwordInputFieldCo = nameInputField.GetComponent<InputField>();
-        Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
+        Network.InitializeServer(5, 25000, false);
         MasterServer.RegisterHost(gameTypeName, nameInputFieldCo.text);
     }
 

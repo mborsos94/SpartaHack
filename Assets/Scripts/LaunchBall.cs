@@ -21,7 +21,7 @@ public class LaunchBall : MonoBehaviour {
     }
 
 	void Update () {
-        if (Input.GetButtonDown("Activate"))
+        if (Input.GetButtonDown("Fire1"))
         {
             // Pick out a random direction within constraints
             float angle = Random.Range(-angleFromVertical, angleFromVertical);

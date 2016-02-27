@@ -14,9 +14,4 @@ public class scrollViewButtonTemplate : MonoBehaviour
         Name = name;
         ButtonText.text = name;
     }
-    public void Button_Click()
-    {
-        ScrollView.ButtonClicked(Name);
-
-    }
 }
