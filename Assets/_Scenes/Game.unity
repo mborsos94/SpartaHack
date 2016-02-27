@@ -380,6 +380,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brick: {fileID: 138488, guid: 4f4131c294a05214c8bbfff48adf46cc, type: 2}
+  powerUps:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.24137926, g: 0, b: 1, a: 0}
+  - {r: 0, g: 0.99264705, b: 0.047920976, a: 0}
+  - {r: 0.99264705, g: 1, b: 0.99421906, a: 0}
+  - {r: 0, g: 0.5656692, b: 0.71323526, a: 0}
   minNumOfBricks: 60
   startXPos: -4.5
 --- !u!1 &1550786113
@@ -481,6 +487,14 @@ Prefab:
     - target: {fileID: 440706, guid: 23ebf8593c080044aac87f97a4df5f78, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 440706, guid: 23ebf8593c080044aac87f97a4df5f78, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440706, guid: 23ebf8593c080044aac87f97a4df5f78, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ebf8593c080044aac87f97a4df5f78, type: 2}
