@@ -10,4 +10,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/joinGameMenu.unity
   - enabled: 1
-    path: Assets/createRoomMenu.unity
+    path: Assets/_Scenes/createRoomMenu.unity
