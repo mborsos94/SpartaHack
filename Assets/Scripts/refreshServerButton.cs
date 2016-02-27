@@ -31,18 +31,6 @@ public class refreshServerButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (MasterServer.PollHostList().Length != 0)
-        {
-            HostData[] hostList = MasterServer.PollHostList();
-            Debug.Log("here");
-            for (int i = 0; i < hostList.Length; i++)
-            {
-                Debug.Log(hostList[i].gameName);
-                GameObject serverScrollViewObject = GameObject.Find("serverScrollView");
-                ScrollRect serverScrollViewRect = serverScrollViewObject.GetComponent<ScrollRect>();
-            }
-            MasterServer.ClearHostList();
-        }
 	}
     
 }
