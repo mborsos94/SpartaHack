@@ -539,7 +539,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 442698, guid: b480a5db5300c1c4a9cc8a45f0689269, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 442698, guid: b480a5db5300c1c4a9cc8a45f0689269, type: 2}
       propertyPath: m_LocalPosition.z
@@ -567,11 +567,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11426532, guid: b480a5db5300c1c4a9cc8a45f0689269, type: 2}
       propertyPath: powerUpChance
-      value: 0.1
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 11426532, guid: b480a5db5300c1c4a9cc8a45f0689269, type: 2}
       propertyPath: powerUpBricks
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426532, guid: b480a5db5300c1c4a9cc8a45f0689269, type: 2}
+      propertyPath: verticalSpan
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b480a5db5300c1c4a9cc8a45f0689269, type: 2}
