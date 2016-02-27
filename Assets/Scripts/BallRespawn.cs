@@ -25,6 +25,7 @@ public class BallRespawn : MonoBehaviour {
             GameObject.Instantiate(ballPrefab, pos, Quaternion.identity);
             respawning = false;
         }
+
 	}
 
     void OnTriggerEnter2D(Collider2D other)

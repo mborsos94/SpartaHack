@@ -20,6 +20,7 @@ public class scrollViewTemplate : MonoBehaviour
     void JoinServer(HostData hostData)
     {
         Network.Connect(hostData);
+        Debug.Log("Connected!");
     }
 
     public void ButtonClicked(string str)

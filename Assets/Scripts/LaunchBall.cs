@@ -5,12 +5,19 @@ using System.Collections;
 public class LaunchBall : MonoBehaviour {
     public float startingSpeed;
     public int   angleFromVertical;
+    public AudioClip clip;
+    AudioSource source;
+    Color[] colors = { Color.red, Color.yellow, Color.white, Color.blue, Color.green, Color.gray, Color.magenta };
+    int color = 0;
 
     private GameObject referenceObj;
 
     void Start()
     {
         referenceObj = GameObject.FindGameObjectWithTag("Player");
+        source = GameObject.Find("SFXSource").GetComponent<AudioSource>();
+        color = UnityEngine.Random.Range(0, colors.Length);
+        this.gameObject.GetComponent<SpriteRenderer>().color = colors[color];
     }
 
 	void Update () {
@@ -27,6 +34,7 @@ public class LaunchBall : MonoBehaviour {
             body.velocity = velocity * startingSpeed;
 
             GameObject.DestroyObject(this);
+            source.PlayOneShot(clip);
         }
         else
         {
