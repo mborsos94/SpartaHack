@@ -45,11 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BallRespawn.cs" />
      <Compile Include="Assets\Scripts\LaunchBall.cs" />
      <Compile Include="Assets\Scripts\PaddleMove.cs" />
      <Compile Include="Assets\Scripts\createRoomButton.cs" />
      <Compile Include="Assets\Scripts\mainMenuEvents.cs" />
      <Compile Include="Assets\Scripts\nextSceneButton.cs" />
+     <Compile Include="Assets\Scripts\refreshServerButton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
