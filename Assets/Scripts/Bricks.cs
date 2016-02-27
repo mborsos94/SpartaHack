@@ -4,6 +4,7 @@ using System.Collections;
 public class Bricks : MonoBehaviour {
     GameObject[] bricks = new GameObject[72];
     public GameObject brick;
+    public Color[] powerUps;
     public int minNumOfBricks;
     public float startXPos;
 	// Use this for initialization
@@ -27,6 +28,7 @@ public class Bricks : MonoBehaviour {
         int ypos = 0;
         int color = 0;
         int currNumOfBricks = bricks.Length;
+        int powerUp = 0;
         Color[] colors = {Color.red, Color.yellow, Color.white, Color.blue, Color.black, Color.green, Color.gray, Color.magenta};
             for (int i = 0; i < bricks.Length; i++)
             {
@@ -46,6 +48,14 @@ public class Bricks : MonoBehaviour {
                         bricks[i].GetComponent<RectTransform>().transform.position = new Vector3(0.5f + startXPos + xpos - 5, ypos - 0.5f, 0);
                         color = UnityEngine.Random.Range(0,colors.Length);
                         bricks[i].GetComponent<MeshRenderer>().material.color = colors[color];
+                        if( UnityEngine.Random.Range(0,72) % 2 == 0 )
+                        {
+                            powerUp = UnityEngine.Random.Range(0, powerUps.Length);
+                            {
+                                bricks[i].GetComponent<Light>().color = powerUps[powerUp];
+                                bricks[i].GetComponent<Light>().intensity = 15;
+                            }
+                        }
                     }
                     else
                     {
