@@ -14,6 +14,7 @@ public class DestroyBlock : MonoBehaviour {
         {
             int particle;
             particle = UnityEngine.Random.Range(0, brickParticles.Length);
+            brickParticles[particle].GetComponent<ParticleSystem>().startColor = gameObject.GetComponent<SpriteRenderer>().color;
             Instantiate(brickParticles[particle], transform.position, Quaternion.identity);
             GameObject.Destroy(gameObject);
         }
