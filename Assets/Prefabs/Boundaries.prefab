@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 128196, guid: 23ebf8593c080044aac87f97a4df5f78, type: 2}
   yOffset: .173999995
-  respawnTime: 3
+  respawnTime: 1.51999998
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
